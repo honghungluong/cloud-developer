@@ -32,14 +32,14 @@ provider:
     # Enable API Gateway logs
     restApi: true
 
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - xray:PutTelemetryRecords
-            - xray:PutTraceSegments
-          Resource: "*"
+  # iam:
+  #   role:
+  #     statements:
+  #       - Effect: Allow
+  #         Action:
+  #           - xray:PutTelemetryRecords
+  #           - xray:PutTraceSegments
+  #         Resource: "*"
 
 
 functions:
@@ -149,7 +149,7 @@ functions:
           cors: true
           authorizer: Auth
     iamRoleStatements:
-      - Effect: Allow
+      - Effect: Allowx
         Action:
           - s3:*
           - xray:PutTraceSegments          
