@@ -140,7 +140,7 @@ functions:
           cors: true
           authorizer: Auth
     iamRoleStatements:
-      - Effect: Allowx
+      - Effect: Allow
         Action:
           - s3:*
           - xray:PutTraceSegments          
